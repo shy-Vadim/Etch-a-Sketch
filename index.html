@@ -7,8 +7,34 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="canvas"></div>
-
+  <div class="container">
+    <div class="left">
+      <div class="header">
+        <h1>Etch-a-Sketch</h1>
+      </div>
+      <div class="canvas"></div>  
+    </div>
+    <div class="right">
+      <div class="color-picker">
+        <div class="picker-text">Color:</div>
+        <div class="colors">
+          <div class="white color"></div>
+          <div class="black color"></div>
+          <div class="red color"></div>
+          <div class="blue color"></div>
+          <div class="green color"></div>
+          <div class="yellow color"></div>
+        </div>
+        <div class="random color">?</div>
+      </div>
+      <div class="controls">
+        <button id="grid">Grid</button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+  </div>
+    
+  
   <script src="script.js"></script>
 </body>
 </html>

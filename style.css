@@ -6,22 +6,125 @@
 
 body {
   background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
+}
 
+button {
+  margin-bottom: 10px;
+  border: none;
+  background-color: #1c8f986b;
+  width: 100%;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.container {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.header {
+  background-color: aqua;
+  border: 5px solid #1c8f986b;
+  border-bottom: none;
+  border-radius: 50% 50% 0 0;
+  height: 50px;
+  width: 385px;
+  text-align:center;
+  padding: 4px 0;
 }
 
 .canvas {
-  margin: 10% auto;
-  height: 400px;
-  width: 400px;
+  border: 5px solid #1c8f986b;
   background-color: aqua;
+  padding: 5px 10px 10px 10px;
+  height: 585px;
+  width: 590px;
   display: flex;
   flex-wrap: wrap;
 }
 
 
 .canvas-box {
-  height: 25px;
-  width: 25px;;
+  height: 35px;
+  width: 35px;
   background-color: white;
   border: 0.3px dotted black;
+}
+
+.right {
+  background-color: aqua;
+  height: 350px;
+  width: 70px;
+  border: 5px solid #1c8f986b;
+  border-left: none;
+  border-radius: 0 100px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.color-picker {
+  margin-top: 25px;
+}
+
+.picker-text {
+  font-size: large;
+}
+
+.colors {
+margin-top: 6px;
+margin-left: 6px;
+display: flex;
+flex-wrap: wrap;
+gap: 12px;
+}
+
+.color {
+  height: 20px;
+  width: 20px;
+  margin-bottom: 5px;
+}
+
+.white {
+  background-color: white;
+}
+
+.black {
+  background-color: black;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.random {
+  margin-top: 10px;
+  margin-left: 20px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: large;
+  border: 0.5px solid black; 
 }
