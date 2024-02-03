@@ -1,10 +1,12 @@
 // DOM SELECTORS
-const canvas = document.querySelector(`.canvas`);
+const canvas = document.querySelector('.canvas');
 let canvasBoxesList = document.querySelectorAll('.canvas-box');
+const colors = document.querySelectorAll(".color");
 
 // VARIABLES
-let currentGridSize = 16;
-let currentColor = "black";
+let currentGridSize = 16
+  , currentColor = "black"
+  , currentMode = "random";
 
 // FUNCTIONS
 function drawCanvasBoxes(gridSize) {
@@ -13,7 +15,7 @@ function drawCanvasBoxes(gridSize) {
     div.classList.add('canvas-box');
     canvas.appendChild(div);
     div.addEventListener("click", () => {
-      changeElementBG(currentColor, div)
+      changeElementBG(div)
     })
   }
   canvasBoxesList = document.querySelectorAll('.canvas-box');
@@ -26,15 +28,24 @@ function removeCanvasBoxes() {
   });
 }
 
-function changeElementBG(color, elementToChange) {
-  elementToChange.classList.add(color)
+function getRandomNum (min, max) {
+  // magical code here
+  return Math.floor(min + Math.random() * (max + 1 - min));
+}
+
+function changeElementBG(elementToChange) {
+  if (currentMode == "normal") {
+    elementToChange.style.backgroundColor = currentColor;
+  } else if (currentMode == "random") {
+    elementToChange.style.backgroundColor = 0;
+  }
 }
 
 // EVENTS
 
 
 
-// OTHER STUFF
+// OTHER STIT
 drawCanvasBoxes(currentGridSize)
 
 
